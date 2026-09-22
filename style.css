@@ -1,0 +1,168 @@
+/* ===== Reset simples ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: #ffffff;
+}
+
+/* Foco visível para navegação por teclado */
+a:focus,
+button:focus {
+  outline: 3px solid #ffcc00;
+  outline-offset: 2px;
+}
+
+/* ===== Cabeçalho ===== */
+.cabecalho {
+  background-color: #1c3d5a;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.cabecalho h1 {
+  font-size: 2rem;
+}
+
+.slogan {
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 2px solid transparent;
+}
+
+.menu a:hover {
+  border-bottom: 2px solid #ffcc00;
+}
+
+/* ===== Seções gerais ===== */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  background-color: #ffffff;
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h2 {
+  color: #1c3d5a;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+h2:first-child {
+  margin-top: 0;
+}
+
+/* ===== Apresentação ===== */
+.apresentacao h2 {
+  margin-top: 0;
+}
+
+/* ===== Conteúdo principal (duas colunas) ===== */
+.conteudo-principal {
+  display: flex;
+  gap: 20px;
+}
+
+.coluna-textos {
+  flex: 2;
+}
+
+.galeria {
+  flex: 1;
+}
+
+.galeria img {
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 2px solid #ddd;
+}
+
+/* ===== Vídeo e Podcast ===== */
+.video video,
+.podcast audio {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+details {
+  background-color: #f0f2f5;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: #1c3d5a;
+}
+
+details p {
+  margin-top: 10px;
+}
+
+/* ===== Rodapé ===== */
+.rodape {
+  background-color: #1c3d5a;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.mensagem-final {
+  margin-top: 10px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* ===== Responsivo para celular ===== */
+@media (max-width: 768px) {
+  .conteudo-principal {
+    flex-direction: column;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .cabecalho h1 {
+    font-size: 1.5rem;
+  }
+}
