@@ -228,3 +228,155 @@ details p {
     width: 100%;
   }
 }
+
+/* =========================================================
+   ALTO CONTRASTE
+   Único trecho novo: botão fixo + modo escuro/amarelo,
+   ativado pelo script.js via classe "alto-contraste" no body.
+   ========================================================= */
+
+/* Painel que agrupa Alto Contraste e o controle de fonte.
+   Começa escondido; o script.js liga/desliga a classe "visivel". */
+.painel-acessibilidade {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+  position: fixed;
+  top: 4.5rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.painel-acessibilidade.visivel {
+  display: flex;
+}
+
+.botao-contraste {
+  background-color: var(--cor-primaria-escura);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--sombra);
+}
+
+.botao-contraste:hover {
+  background-color: var(--cor-primaria);
+}
+
+/* Botões "A+" e "A−" de tamanho de fonte */
+.controle-fonte {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.botao-fonte {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cor-primaria-escura);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--sombra);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.botao-fonte:hover {
+  background-color: var(--cor-primaria);
+  transform: scale(1.05);
+}
+
+/* Botão pequeno, circular e discreto que liga/desliga o painel acima */
+.botao-icone {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1001;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cor-primaria-escura);
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--sombra);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.botao-icone:hover {
+  background-color: var(--cor-primaria);
+  transform: scale(1.05);
+}
+
+body.alto-contraste {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.alto-contraste .cabecalho {
+  background: #000 !important;
+  border-bottom: 3px solid #ffd400 !important;
+}
+
+body.alto-contraste .menu a {
+  color: #ffd400 !important;
+}
+
+body.alto-contraste .menu a:hover {
+  background-color: #ffd400 !important;
+  color: #000 !important;
+}
+
+body.alto-contraste section,
+body.alto-contraste .coluna-textos,
+body.alto-contraste .galeria,
+body.alto-contraste details {
+  background-color: #000 !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  border: 2px solid #ffd400 !important;
+}
+
+body.alto-contraste h2,
+body.alto-contraste details summary {
+  color: #ffd400 !important;
+}
+
+body.alto-contraste a {
+  color: #ffd400 !important;
+  text-decoration: underline;
+}
+
+body.alto-contraste .galeria img {
+  border: 2px solid #ffd400 !important;
+  box-shadow: none !important;
+}
+
+body.alto-contraste .rodape {
+  background-color: #000 !important;
+  border-top: 3px solid #ffd400 !important;
+}
+
+body.alto-contraste .botao-contraste,
+body.alto-contraste .botao-icone,
+body.alto-contraste .botao-fonte {
+  background-color: #ffd400 !important;
+  color: #000 !important;
+  border: 2px solid #fff !important;
+}

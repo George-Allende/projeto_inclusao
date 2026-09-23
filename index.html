@@ -8,6 +8,25 @@
 </head>
 <body>
 
+  <!-- Botão pequeno e discreto: mostra/esconde o painel de acessibilidade -->
+  <button id="btn-toggle-contraste" class="botao-icone" type="button" aria-label="Mostrar opções de acessibilidade" aria-expanded="false">
+    ♿
+  </button>
+
+  <!-- Painel de acessibilidade: começa escondido, aparece ao clicar no botão acima -->
+  <div id="painel-acessibilidade" class="painel-acessibilidade">
+
+    <button id="btn-alto-contraste" class="botao-contraste" type="button" aria-pressed="false">
+      Ativar Alto Contraste
+    </button>
+
+    <div class="controle-fonte">
+      <button id="btn-fonte-menos" class="botao-fonte" type="button" aria-label="Diminuir tamanho da letra">A−</button>
+      <button id="btn-fonte-mais" class="botao-fonte" type="button" aria-label="Aumentar tamanho da letra">A+</button>
+    </div>
+
+  </div>
+
   <header class="cabecalho">
     <h1>Tech para Todos</h1>
     <p class="slogan">Tecnologia que conecta, acessibilidade que inclui.</p>
@@ -140,5 +159,6 @@ Por isso, a acessibilidade deve ser pensada desde o início de um projeto digita
     </p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
